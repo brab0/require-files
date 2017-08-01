@@ -44,6 +44,6 @@ function only(path, excludes){
 }
 
 module.exports = {
-  all : all,
+  get : get,
   only : only
 }
