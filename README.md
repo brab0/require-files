@@ -4,7 +4,7 @@ Require files with wildcards
 
 ## Install
 ```bash
-    $ node install require-files --save
+$ node install require-files --save
 ```
 
 ## Methods
@@ -12,12 +12,12 @@ Require files with wildcards
 It returns an array with every file found based on a wildcard string. `exludePaths` are not required.
 
 ```javascript
-    const files = require('require-files').get('my/path/**/*.js');    
+const files = require('require-files').get('my/path/**/*.js');    
 ```
 
 ### only(includePaths, exludePaths)
 requires all files (without returning) found based on a wildcard string. `exludePaths` are not required.
 
 ```javascript
-    require('require-files').only('my/path/**/*.js');    
+require('require-files').only('my/path/**/*.js');    
 ```
