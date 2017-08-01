@@ -2,6 +2,11 @@ require-files
 =============
 Require files with wildcards
 
+## Install
+```bash
+    $ node install require-files --save
+```
+
 ## Methods
 ### get(includePaths, exludePaths)
 It returns an array with every file found based on a wildcard string. `exludePaths` are not required.
