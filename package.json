@@ -1,0 +1,26 @@
+{
+  "name": "require-files",
+  "version": "0.0.1",
+  "description": "require files with wildcards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brab0/require-files.git"
+  },
+  "keywords": [
+    "require"
+  ],
+  "author": "Rodrigo Brabo <brabo.rodrigo@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brab0/require-files/issues"
+  },
+  "homepage": "https://github.com/brab0/require-files#readme",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4"
+  }
+}
