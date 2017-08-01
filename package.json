@@ -1,6 +1,6 @@
 {
   "name": "require-files",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "require files with wildcards",
   "main": "index.js",
   "scripts": {

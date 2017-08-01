@@ -4,7 +4,7 @@ Require files with wildcards
 
 ## Install
 ```bash
-$ node install require-files --save
+$ npm install require-files --save
 ```
 
 ## Methods
