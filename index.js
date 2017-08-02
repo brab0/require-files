@@ -4,14 +4,28 @@ var _ = require('lodash'),
 var _this = this;
 
 function get(globPatterns, excludes) {
+  let path = __dirname.split('/')
+  const root = path.splice(0, path.length - 2).join('/');
 
+  globPatterns = root + '/' + globPatterns;
+
+  return explore(globPatterns, excludes);
+};
+
+function only(path, excludes){
+  get(path, excludes).forEach(command => {
+      require(command);
+  });
+}
+
+function explore(globPatterns, excludes){
   var urlRegex = new RegExp('^(?:[a-z]+:)?\/\/', 'i');
 
   var output = [];
 
   if (_.isArray(globPatterns)) {
     globPatterns.forEach(function (globPattern) {
-      output = _.union(output, _this.getFilesIn(globPattern, excludes));
+      output = _.union(output, _this.explore(globPattern, excludes));
     });
   } else if (_.isString(globPatterns)) {
     if (urlRegex.test(globPatterns)) {
@@ -33,14 +47,7 @@ function get(globPatterns, excludes) {
       output = _.union(output, files);
     }
   }
-
   return output;
-};
-
-function only(path, excludes){
-  get(process.cwd() + '/' + path, excludes).forEach(command => {
-      require(command);
-  });
 }
 
 module.exports = {
